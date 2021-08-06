@@ -41,5 +41,23 @@ Two filters were added to the page: **product_category** and **date range**, whi
 
 After the load, the data were inspected and checked for any anomalies or missing values in key columns, e.g. **weights**, **order_devilery_date**, **product_category**, etc. The following issues were found: In total, **610** different products don't have a **category**; There were several orders that were delivered but don't have '**order_delivered_customer_date**' filled in; There were a couple of orders that didn't have any order lines (order_items_dataset entries) but were in a status invoiced or shipped. Other than that no major data issues were discovered (no null values for weights, product_id, etc). Data check results can be seen on the **'Data Quality Check and Validation'** page of the PowerBI app.
 
+In addition, calculations from PowerBI were validated against the files that were provided (total number of rows, total quantity, and weights delivered, etc). The following files were even imported into the PostgreSQL database in a raw format for the purpose of easier validation, as seen in the images below: **order_items_dataset**, **orders_dataset**, **products_dataset**;
+
+
+
+
+![image](https://user-images.githubusercontent.com/56403895/128522771-83097fe1-478a-4342-926c-56e816adf071.png)
+
+
+![image](https://user-images.githubusercontent.com/56403895/128522955-b8a9e7da-837c-4f6f-bf8e-605185fe1784.png)
+
+
+![image](https://user-images.githubusercontent.com/56403895/128522996-cb330807-9ea1-4617-9cd2-5bb61cddb88a.png)
+
+![image](https://user-images.githubusercontent.com/56403895/128523134-3f766f65-bed5-4378-a947-bd6e05136b6b.png)
+
+
+
+
 
 
