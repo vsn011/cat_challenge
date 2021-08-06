@@ -5,7 +5,9 @@ The task was to summarize by product id weights of delivered products that belon
 In the beginning, 6 data sets were provided and loaded into the PowerBI app: **customers_dataset**, **order_items_dataset**, **orders_dataset**, **products_dataset**, **sellers_dataset**, **targets**. 
 In addition, **dimCalendar** table we generated in **PowerQuery**. As the requirement was to calculate delivered weights by a date range, column '**order_delivered_customer_date**' was used for joining with **dimCalendar** table (as this column was in the timestamp format, the date part was extracted from it into the '**delivered_final_date**' column). After the load, **order_items_dataset** was joined to the **orders_dataset** into a single fact table. In addition, column '**product_weight_g**' from **products_dataset** was joined to the same table. Since the '**product_categories**' column in **products_dataset** can contain more than one category separated by a comma, it was parsed in a separate table (**products_categories**) where each category was split into a separate row. Also, a separate table was created for storing **DAX** measures (**a_measures**).
 
-![image](https://user-images.githubusercontent.com/56403895/128514492-ba59e2e2-c175-4e3c-9534-27f622e72592.png)
+
+![image](https://user-images.githubusercontent.com/56403895/128522222-24dfaae1-0a95-4f85-a718-7746103acc09.png)
+
 
 
 **Intro** 
@@ -13,7 +15,9 @@ In addition, **dimCalendar** table we generated in **PowerQuery**. As the requir
 
 The **Intro** page contains a general overview of the numbers: **Weights Delivered**, **Quantity Delivered**,** Number of Orders canceled**, **Weights canceled**, **Top 5 categories by delivered quantity**, **Top 5 categories by delivered weights**, and **Top 5 categories by Income**. The idea behind this page was to provide a general overview of the data before answering the main requirement from the assignment. It also contains the button that leads to this page. 
 
-![Uploading image.png…]()
+
+
+![image](https://user-images.githubusercontent.com/56403895/128514492-ba59e2e2-c175-4e3c-9534-27f622e72592.png)
 
 
 **Weights analysis**
